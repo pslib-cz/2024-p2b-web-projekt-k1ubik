@@ -1,0 +1,19 @@
+body {
+    background-color: #333333;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header, footer  {
+    background-color: rgb(0, 0, 0, 0.4);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    box-sizing: border-box;
+    gap: 30px;
+}
