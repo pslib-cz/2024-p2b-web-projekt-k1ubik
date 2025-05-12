@@ -89,6 +89,9 @@ footer {
     header {
         gap: 20px; /* Střední mezera pro tablety */
     }
+    main {
+        padding-top: calc(20px + 50px);
+    }
     .whoarewe main {
         grid-template-columns: repeat(2, 1fr); /* Two columns */
         grid-auto-rows: auto; /* Automatically size rows */
