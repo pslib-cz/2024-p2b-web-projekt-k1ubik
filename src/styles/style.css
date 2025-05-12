@@ -56,8 +56,29 @@ main {
     overflow: hidden; /* Ensure child elements don't overflow */
 }
 .whatscat main {
+    display: grid;
+    gap: 50px;
+    padding-top: calc(400px + 50px);
+}
+.whatscat main div {
+    display: grid;
+    grid-template-rows: auto; /* Automatically size rows */
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 0; /* Remove gaps between grid items */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+    background-color: #626262; /* Optional: Add a shared background color */
+}
+.whatscat main div div {
     display: flex;
-    padding-top: calc(200px + 50px);
+    flex-direction: column; /* Stack components vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: #787878;
+    height: auto; /* Allow height to adjust based on content */
+    margin: 0 auto; /* Center the div itself horizontally */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in width/height calculations */
 }
 .Main_img {
     width: 100%;
