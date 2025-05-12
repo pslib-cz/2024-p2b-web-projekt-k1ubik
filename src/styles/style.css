@@ -16,22 +16,37 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-family: 'Inter', sans-serif;
 }
-
-.boxtop {
+.whoarewe main div h1 {
     text-align: center;
     background-color: #626262;
 }
-.boxbottom {
+.whoarewe main div div, .whoarewe main div .clk_h {
     text-align: center;
     background-color:#787878;
 }
+
 
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: calc(200px + 50px);
+    padding-top: calc(20px + 50px);
+}
+.whoarewe main {
+    display: grid;
+    gap: 50px;
+    padding-top: calc(40px + 50px);
+}
+.whoarewe main div {
+    grid-template-rows: auto; /* Automatically size rows */
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 0; /* Remove gaps between grid items */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+    background-color: #626262; /* Optional: Add a shared background color */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    overflow: hidden; /* Ensure child elements don't overflow */
 }
 .Main_img {
     width: 100%;
@@ -42,37 +57,24 @@ main {
     left: 0;
     z-index: -1;
 }
-
-header, footer  {
-    display: flex;
-    background-color:  rgb(0, 0, 0, 0.4);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    box-sizing: border-box;
-    gap: 30px;
-    position: fixed;
-}
-footer {
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: rgba(0, 0, 0, 0.4);
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 50px;
     box-sizing: border-box;
-    gap: clamp(10px, 5vw, 200px); /* Postupné zvětšování mezery */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    gap: clamp(10px, 5vw, 200px); /* Responsive gap */
+}
+footer {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px; /* Ensure footer is 50px tall */
+    box-sizing: border-box;
 }
 .bottom__box {
     display: flex;
@@ -86,6 +88,22 @@ header {
 @media (min-width: 768px) {
     header {
         gap: 20px; /* Střední mezera pro tablety */
+    }
+    .whoarewe main {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-auto-rows: auto; /* Automatically size rows */
+    }
+    .whoarewe main div:not(:first-child):not(:last-child) {
+        height: 300px; /* Set height for middle children */
+    }
+    .whoarewe main div div:not(:first-child):not(:last-child) {
+        height: 400px;
+    }
+    .whoarewe main div:last-child, .whoarewe main div:first-child {
+        grid-column: span 2; /* Make the last div span across both columns */
+        justify-self: center; /* Center the last div horizontally */
+        grid-column: 1 / -1; /* Span across both columns */
+        width: 100%;
     }
 }
 
