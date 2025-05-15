@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-family: 'Inter', sans-serif;
 }
-.whoarewe main div h1, .whatscat main h1, .pickcat h1 {
+.whoarewe main div h1, .whatscat main h1, .pickcat h1, .forms main div h1 {
     text-align: center;
     background-color: #626262;
 }
@@ -65,9 +65,11 @@ main {
     overflow: hidden; /* Ensure child elements don't overflow */
 }
 .whatscat main {
-    display: grid;
-    gap: 50px;
-    padding-top: calc(400px + 50px);
+    width: 100%; /* Make it span the full width of the page */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-end; /* Align items at the bottom */
+    align-items: center; /* Center items horizontally */
 }
 .whatscat main div {
     display: grid;
@@ -78,7 +80,7 @@ main {
     padding: 0; /* Remove any default padding */
     background-color: #626262; /* Optional: Add a shared background color */
 }
-.whatscat main div div {
+.whatscat main div div{
     display: flex;
     flex-direction: column; /* Stack components vertically */
     justify-content: center; /* Center content vertically */
@@ -111,6 +113,11 @@ main {
     padding: 0; /* Remove any default padding */
 }
 
+.forms main div {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(3, 1fr);
+}
 
 .Main_img {
     width: 100%;
@@ -173,32 +180,34 @@ footer {
 .slide-overlay .button {
     color: black;
 }
+.forms main {
+    width: 100%; /* Make it span the full width of the page */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-end; /* Align items at the bottom */
+    align-items: center; /* Center items horizontally */
+}
 .forms main .Main_img {
     top: 0;
 }
-.forms main .forms_container {
-    bottom: 0; /* Align it to the bottom of the page */
+.forms main div {
     width: 100%; /* Make it span the full width of the page */
     background-color: #626262; /* Keep the background color */
-    height: 400px; /* Maintain the height */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack inputs and button vertically */
     justify-content: flex-start; /* Align items at the top */
     align-items: center; /* Center items horizontally */
-    gap: 20px; /* Add spacing between inputs and button */
-    padding: 20px; /* Add padding inside the container */
+    gap: 10px;
+    padding-bottom: 15px
 }
-
-.forms main .forms_container .button {
-    background-color: pink; /* Button background color */
-    color: black; /* Button text color */
-    padding: 10px 20px; /* Add padding for a normal-sized button */
-    font-size: 1rem; /* Set font size */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Add rounded corners */
-    cursor: pointer; /* Add pointer cursor on hover */
-    width: auto; /* Ensure the button has a normal size */
-    height: auto; /* Ensure the button height is normal */
+.forms main div input {
+    width: 80%; /* Make the input span 80% of the parent container */
+    height: 50px; /* Increase the height of the input */
+    padding: 10px; /* Add padding inside the input for better spacing */
+    font-size: 1rem; /* Increase the font size for better readability */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
 }
 /* Pro větší obrazovky */
 @media (min-width: 768px) {
@@ -240,8 +249,18 @@ footer {
     .slide-overlay {
         top: 80%; /* Adjust position for larger screens */
     }
-    
-}
+    .forms main div div { 
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+        grid-template-rows: 1fr;
+        gap: 20px; /* Add spacing between grid items */
+        justify-items: center; /* Center items horizontally in their grid cells */
+        align-items: center; /* Center items vertically in their grid cells */
+        }
+        .forms main div div:last-child { 
+            grid-template-columns: 1fr; 
+        }
+    } /* Close @media (min-width: 768px) */
 
 @media (min-width: 1024px) {
     header {

@@ -5,3 +5,9 @@
     cursor: pointer;
     text-align: center;
 }
+.forms main div .button {
+    width: 300px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
