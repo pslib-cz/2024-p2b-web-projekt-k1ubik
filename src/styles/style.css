@@ -173,8 +173,33 @@ footer {
 .slide-overlay .button {
     color: black;
 }
+.forms main .Main_img {
+    top: 0;
+}
+.forms main .forms_container {
+    bottom: 0; /* Align it to the bottom of the page */
+    width: 100%; /* Make it span the full width of the page */
+    background-color: #626262; /* Keep the background color */
+    height: 400px; /* Maintain the height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack inputs and button vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Add spacing between inputs and button */
+    padding: 20px; /* Add padding inside the container */
+}
 
-
+.forms main .forms_container .button {
+    background-color: pink; /* Button background color */
+    color: black; /* Button text color */
+    padding: 10px 20px; /* Add padding for a normal-sized button */
+    font-size: 1rem; /* Set font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Add pointer cursor on hover */
+    width: auto; /* Ensure the button has a normal size */
+    height: auto; /* Ensure the button height is normal */
+}
 /* Pro větší obrazovky */
 @media (min-width: 768px) {
     header {
