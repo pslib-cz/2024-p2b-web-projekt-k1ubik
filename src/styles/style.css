@@ -99,12 +99,12 @@ main {
 
 .pickcat main .swiper .swiper-wrapper .swiper-slide {
     width: 100%; /* Ensure the slide fills its container */
-    height: 100vh; /* Make the slide fill the full height of the viewport */
+    height: 100%; /* Make the slide fill the full height of the viewport */
 }
 
 .pickcat main .swiper .swiper-wrapper .swiper-slide img {
     width: 100%; /* Make the image fill its container */
-    height: 100%; /* Maintain full height */
+    height: 100vh; /* Maintain full height */
     object-fit: cover; /* Ensure the image covers the container */
     display: block; /* Remove inline spacing */
     margin: 0; /* Remove any default margins */
@@ -146,6 +146,33 @@ footer {
     text-align: center; /* Zarovnání textu na střed */
     gap: 20px; /* Mezera mezi komponentami */
 }
+.swiper {
+      width: 100%;
+      height: 100%;
+}
+.slide-overlay {
+    color: #ffffff; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add a shadow for better visibility */
+    font-weight: bold; /* Make the text bold for better readability */
+    font-size: 1rem; /* Adjust font size as needed */
+    text-align: center; /* Center the text */
+    z-index: 10; /* Ensure the text is above other elements */
+    position: absolute; /* Position the text over the slide */
+    width: 100%;
+    height: 200px;
+    top: 90%;
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    padding: 10px; /* Add padding around the text */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+    border-radius: 5px; /* Optional: Add rounded corners */
+} 
+.slide-overlay .clk_h {
+    font-size: small;
+}
+.slide-overlay .button {
+    color: black;
+}
 
 
 /* Pro větší obrazovky */
@@ -185,6 +212,9 @@ footer {
         grid-template-columns: repeat(2, 1fr); /* 4 columns for larger screens */
         grid-template-rows: repeat(2, 1fr);
     }
+    .slide-overlay {
+        top: 80%; /* Adjust position for larger screens */
+    }
     
 }
 
@@ -201,8 +231,11 @@ footer {
         width: 100vh;
         height: 100vh;
     }
+    .slide-overlay {
+        top: 88%; /* Adjust position for larger screens */
+        height: 250px;
+    }
 }
-
 @media (min-width: 1440px) {
     header {
         gap: 200px; /* Největší mezera pro velké obrazovky */
