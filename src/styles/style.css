@@ -92,30 +92,24 @@ main {
 .pickcat main {
     display: grid; /* Use CSS Grid for layout */
     grid-template-columns: 1fr; /* Single column layout */
-    grid-auto-rows: 500px; /* Each row takes up the full viewport height */
-    width: 100%; /* Ensure the main section spans the full width of the viewport */
     margin: 0; /* Remove default margins */
     padding: 0; /* Remove padding */
     box-sizing: border-box; /* Include padding in width/height calculations */
-    z-index: -1;
 }
 
-.pickcat main .swiper-slide {
-    width: 100%; /* Ensure the grid items fill their columns */
-    height: 100%; /* Make the images fill the full height */
-    overflow: hidden; /* Prevent content overflow */
+.pickcat main .swiper .swiper-wrapper .swiper-slide {
+    width: 100%; /* Ensure the slide fills its container */
+    height: 100vh; /* Make the slide fill the full height of the viewport */
 }
 
-.pickcat main .swiper-slide {
+.pickcat main .swiper .swiper-wrapper .swiper-slide img {
     width: 100%; /* Make the image fill its container */
     height: 100%; /* Maintain full height */
     object-fit: cover; /* Ensure the image covers the container */
     display: block; /* Remove inline spacing */
     margin: 0; /* Remove any default margins */
     padding: 0; /* Remove any default padding */
-    z-index: -1; /* Ensure the image is behind other content */
 }
-
 
 
 .Main_img {
@@ -175,10 +169,21 @@ footer {
         grid-column: 1 / -1; /* Span across both columns */
         width: 100%;
     }
+
+    .pickcat main .swiper {
+        height: 100%;
+    }
+    .pickcat main .swiper .swiper-wrapper .swiper-slide {
+        width: 100%; /* Ensure the slide fills its container */
+        height: 100%; /* Make the slide fill the full height */
+    }
+
+    .pickcat main .swiper .swiper-wrapper .swiper-slide img {
+        height: 100%; /* Maintain full height */
+    }
     .pickcat main {
         grid-template-columns: repeat(2, 1fr); /* 4 columns for larger screens */
-        grid-auto-rows: auto; /* Automatically size rows */
-        height: 100vh; /* Ensure the grid spans the full viewport height */
+        grid-template-rows: repeat(2, 1fr);
     }
     
 }
@@ -189,8 +194,12 @@ footer {
     }
     .pickcat main {
         grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
-        grid-auto-rows: auto; /* Automatically size rows */
+        grid-template-rows: repeat(1, 1fr);
         height: 100vh; /* Ensure the grid spans the full viewport height */
+    }
+    .pickcat main .swiper .swiper-wrapper .swiper-slide img {
+        width: 100vh;
+        height: 100vh;
     }
 }
 
