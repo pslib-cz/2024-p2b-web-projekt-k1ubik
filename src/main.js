@@ -4,7 +4,7 @@ import './styles/components.css';
 import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const swiper = new Swiper(".swiper", {
+  var swiper = new Swiper(".pickcat main .swiper", {
     spaceBetween: 0,
     centeredSlides: true,
     autoplay: {
@@ -19,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-})});
+  });
+});
