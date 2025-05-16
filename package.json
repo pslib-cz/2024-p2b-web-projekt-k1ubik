@@ -15,7 +15,6 @@
     "vituum": "^1.2.0"
   },
   "dependencies": {
-    "swiper": "^11.2.6",
-    "vituum": "^1.2.0"
+    "swiper": "^11.2.6"
   }
 }
