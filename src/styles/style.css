@@ -209,6 +209,7 @@ footer {
     border-radius: 5px; /* Optional: Add rounded corners */
     box-sizing: border-box; /* Ensure padding is included in the width/height */
 }
+
 /* Pro větší obrazovky */
 @media (min-width: 768px) {
     header {
