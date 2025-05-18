@@ -216,7 +216,13 @@ footer {
 .catway main {
     display: flex;
 }
-/* Pro větší obrazovky */
+@media (max-width: 530px) {
+    .slide-overlay {
+        top: 85%;
+        height: 250px;
+    }
+}
+
 @media (min-width: 768px) {
     header {
         gap: 20px; /* Střední mezera pro tablety */
