@@ -37,6 +37,9 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0; /* Remove default margin */
     box-sizing: border-box; /* Include padding in width calculations */
 }
+.catway h1 {
+    text-shadow: #333333 2px 2px 4px;
+}
 
 
 main {
@@ -86,7 +89,7 @@ main {
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     background-color: #787878;
-    height: auto; /* Allow height to adjust based on content */
+    height: 100%; /* Allow height to adjust based on content */
     margin: 0 auto; /* Center the div itself horizontally */
     padding: 20px; /* Add padding for spacing */
     box-sizing: border-box; /* Include padding in width/height calculations */
@@ -112,7 +115,6 @@ main {
     margin: 0; /* Remove any default margins */
     padding: 0; /* Remove any default padding */
 }
-
 .forms main div {
     display: grid;
     grid-template-columns: 1fr; 
@@ -137,7 +139,7 @@ header {
     gap: clamp(10px, 5vw, 200px); /* Responsive gap */
 }
 footer {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #262626;
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -178,7 +180,9 @@ footer {
     font-size: small;
 }
 .slide-overlay .button {
+    padding-top: 10px; /* Add padding for the button */
     color: black;
+    text-shadow: none;
 }
 .forms main {
     width: 100%; /* Make it span the full width of the page */
@@ -209,7 +213,9 @@ footer {
     border-radius: 5px; /* Optional: Add rounded corners */
     box-sizing: border-box; /* Ensure padding is included in the width/height */
 }
-
+.catway main {
+    display: flex;
+}
 /* Pro větší obrazovky */
 @media (min-width: 768px) {
     header {
