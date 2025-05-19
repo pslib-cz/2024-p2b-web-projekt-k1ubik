@@ -11,3 +11,9 @@
     justify-content: center;
     align-items: center;
 }
+.button:hover {
+    background: #b7be8e;
+}
+header a:hover {
+    height: 10px;
+}

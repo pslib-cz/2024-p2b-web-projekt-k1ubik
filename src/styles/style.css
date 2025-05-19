@@ -1,24 +1,53 @@
 html, body {
-    height: 100%; /* Ensure the html and body take up the full height of the viewport */
-    margin: 0; /* Remove default margin */
+    height: 100%;
 }
 body {
     font-family: 'Inter', sans-serif;
     background-color: #333333;
-    margin: 0; /* Remove default margin */
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, main (fills space), footer */
-    height: 100vh; /* Ensure the body takes up the full viewport height */
+    grid-template-rows: auto 1fr auto;
 }
-
 h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
     font-family: 'Inter', sans-serif;
+}
+.Main_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+header {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: clamp(10px, 5vw, 200px);
+}
+footer {
+    background-color: #262626;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    box-sizing: border-box;
 }
 .clk_h {
     color: #ffffff;
     text-align: center;
     font-family: 'Inter', sans-serif;
+}
+main {
+    align-items: center;
+    padding-top: calc(20px + 50px);
+}
+.index {
+    height: 100%;
 }
 .whoarewe main div h1, .whatscat main h1, .pickcat h1, .forms main div h1 {
     text-align: center;
@@ -28,194 +57,152 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     background-color:#787878;
 }
-.pickcat h1 {
-    text-align: center; /* Center the text */
-    height: 80px;
-    background-color: #626262; /* Background color for the heading */
-    color: #ffffff; /* Text color */
-    padding: 20px; /* Add padding around the text */
-    margin: 0; /* Remove default margin */
-    box-sizing: border-box; /* Include padding in width calculations */
-}
-.catway h1 {
-    text-shadow: #333333 2px 2px 4px;
-}
-
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: calc(20px + 50px);
-}
-.index {
-    height: 100%;
-}
 .whoarewe main {
     display: grid;
     gap: 50px;
     padding-top: calc(40px + 50px);
 }
 .whoarewe main div {
-    grid-template-rows: auto; /* Automatically size rows */
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 0; /* Remove gaps between grid items */
-    margin: 0; /* Remove any default margins */
-    padding: 0; /* Remove any default padding */
-    background-color: #626262; /* Optional: Add a shared background color */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    overflow: hidden; /* Ensure child elements don't overflow */
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    background-color: #626262;
+    border-radius: 5px;
+    overflow: hidden;
 }
 .whatscat main {
-    width: 100%; /* Make it span the full width of the page */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: flex-end; /* Align items at the bottom */
-    align-items: center; /* Center items horizontally */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 .whatscat main div {
     display: grid;
-    grid-template-rows: auto; /* Automatically size rows */
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 0; /* Remove gaps between grid items */
-    margin: 0; /* Remove any default margins */
-    padding: 0; /* Remove any default padding */
-    background-color: #626262; /* Optional: Add a shared background color */
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #626262;
 }
 .whatscat main div div{
     display: flex;
-    flex-direction: column; /* Stack components vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #787878;
-    height: 100%; /* Allow height to adjust based on content */
-    margin: 0 auto; /* Center the div itself horizontally */
-    padding: 20px; /* Add padding for spacing */
-    box-sizing: border-box; /* Include padding in width/height calculations */
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.pickcat h1 {
+    text-align: center;
+    height: 80px;
+    background-color: #626262;
+    color: #ffffff;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
 }
 .pickcat main {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: 1fr; /* Single column layout */
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove padding */
-    box-sizing: border-box; /* Include padding in width/height calculations */
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
 }
 
 .pickcat main .swiper .swiper-wrapper .swiper-slide {
-    width: 100%; /* Ensure the slide fills its container */
-    height: 100%; /* Make the slide fill the full height of the viewport */
+    width: 100%;
+    height: 100%;
 }
 
 .pickcat main .swiper .swiper-wrapper .swiper-slide img {
-    width: 100%; /* Make the image fill its container */
-    height: 100vh; /* Maintain full height */
-    object-fit: cover; /* Ensure the image covers the container */
-    display: block; /* Remove inline spacing */
-    margin: 0; /* Remove any default margins */
-    padding: 0; /* Remove any default padding */
-}
-.forms main div {
-    display: grid;
-    grid-template-columns: 1fr; 
-    grid-template-rows: repeat(3, 1fr);
-}
-
-.Main_img {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
-    position: absolute;
-    z-index: -1;
-}
-header {
-    height: 50px; /* Set the height explicitly */
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box; /* Include padding and border in the height */
-    gap: clamp(10px, 5vw, 200px); /* Responsive gap */
-}
-footer {
-    background-color: #262626;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px; /* Ensure footer is 50px tall */
-    box-sizing: border-box;
-}
-.bottom__box {
-    display: flex;
-    flex-direction: column; /* Komponenty pod sebou */
-    justify-content: center; /* Vertikální zarovnání na střed */
-    align-items: center; /* Horizontální zarovnání na střed */
-    text-align: center; /* Zarovnání textu na střed */
-    gap: 20px; /* Mezera mezi komponentami */
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 .swiper {
       width: 100%;
       height: 100%;
 }
 .slide-overlay {
-    color: #ffffff; /* Text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add a shadow for better visibility */
-    font-weight: bold; /* Make the text bold for better readability */
-    font-size: 1rem; /* Adjust font size as needed */
-    text-align: center; /* Center the text */
-    z-index: 10; /* Ensure the text is above other elements */
-    position: absolute; /* Position the text over the slide */
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 10;
+    position: absolute;
     width: 100%;
     height: 200px;
     top: 90%;
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for perfect centering */
-    padding: 10px; /* Add padding around the text */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
-    border-radius: 5px; /* Optional: Add rounded corners */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 } 
 .slide-overlay .clk_h {
     font-size: small;
 }
 .slide-overlay .button {
-    padding-top: 10px; /* Add padding for the button */
+    padding-top: 10px;
     color: black;
     text-shadow: none;
 }
+.forms main div {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(3, 1fr);
+}
 .forms main {
-    width: 100%; /* Make it span the full width of the page */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: flex-end; /* Align items at the bottom */
-    align-items: center; /* Center items horizontally */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 .forms main .Main_img {
     top: 0;
 }
 .forms main div {
-    width: 100%; /* Make it span the full width of the page */
-    background-color: #626262; /* Keep the background color */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack inputs and button vertically */
-    justify-content: flex-start; /* Align items at the top */
-    align-items: center; /* Center items horizontally */
+    width: 100%;
+    background-color: #626262;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     gap: 10px;
-    padding-bottom: 15px
+    padding-bottom: 15px;
 }
 .forms main div input {
-    width: 80%; /* Make the input span 80% of the parent container */
-    height: 50px; /* Increase the height of the input */
-    padding: 10px; /* Add padding inside the input for better spacing */
-    font-size: 1rem; /* Increase the font size for better readability */
-    border: 1px solid #ccc; /* Optional: Add a border */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    box-sizing: border-box; /* Ensure padding is included in the width/height */
+    width: 80%;
+    height: 50px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.catway h1 {
+    text-shadow: #333333 2px 2px 4px;
+}
+
+.bottom__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
 }
 .catway main {
     display: flex;
 }
+
+
 @media (max-width: 530px) {
     .slide-overlay {
         top: 85%;
@@ -225,76 +212,68 @@ footer {
 
 @media (min-width: 768px) {
     header {
-        gap: 20px; /* Střední mezera pro tablety */
+        gap: 20px;
     }
     .whoarewe main {
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
-        grid-auto-rows: auto; /* Automatically size rows */
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
     }
     .whoarewe main div:not(:first-child):not(:last-child) {
-        height: 300px; /* Set height for middle children */
+        height: 300px;
     }
     .whoarewe main div div:not(:first-child):not(:last-child) {
         height: 400px;
     }
     .whoarewe main div:last-child, .whoarewe main div:first-child {
-        grid-column: span 2; /* Make the last div span across both columns */
-        justify-self: center; /* Center the last div horizontally */
-        grid-column: 1 / -1; /* Span across both columns */
+        grid-column: span 2;
+        justify-self: center;
+        grid-column: 1 / -1;
         width: 100%;
     }
-
-    .pickcat main .swiper {
+    .pickcat main .swiper .swiper-wrapper .swiper-slide img {
         height: 100%;
     }
-    .pickcat main .swiper .swiper-wrapper .swiper-slide {
-        width: 100%; /* Ensure the slide fills its container */
-        height: 100%; /* Make the slide fill the full height */
-    }
-
-    .pickcat main .swiper .swiper-wrapper .swiper-slide img {
-        height: 100%; /* Maintain full height */
-    }
     .pickcat main {
-        grid-template-columns: repeat(2, 1fr); /* 4 columns for larger screens */
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
     .slide-overlay {
-        top: 80%; /* Adjust position for larger screens */
+        top: 78%;
+        height: 250px;
     }
     .forms main div div { 
-        display: grid; /* Use grid layout */
-        grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
-        gap: 20px; /* Add spacing between grid items */
-        justify-items: center; /* Center items horizontally in their grid cells */
-        align-items: center; /* Center items vertically in their grid cells */
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
         }
         .forms main div div:last-child { 
             grid-template-columns: 1fr; 
         }
-    } /* Close @media (min-width: 768px) */
+    }
 
 @media (min-width: 1024px) {
     header {
-        gap: 100px; /* Větší mezera pro počítače */
+        gap: 100px;
     }
     .pickcat main {
-        grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(1, 1fr);
-        height: 100vh; /* Ensure the grid spans the full viewport height */
+        height: 100vh;
     }
     .pickcat main .swiper .swiper-wrapper .swiper-slide img {
         width: 100vh;
         height: 100vh;
     }
     .slide-overlay {
-        top: 88%; /* Adjust position for larger screens */
-        height: 250px;
+        top: 88%;
+        height: 300px;
     }
 }
 @media (min-width: 1440px) {
     header {
-        gap: 200px; /* Největší mezera pro velké obrazovky */
+        gap: 200px;
     }
 }
