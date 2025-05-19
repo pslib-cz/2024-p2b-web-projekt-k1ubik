@@ -201,14 +201,16 @@ main {
     border-radius: 5px;
     box-sizing: border-box;
 }
-.catway h1 {
+.catway h1, .catway .clk_h {
     text-shadow: #333333 2px 2px 4px;
 }
+
 .catway main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 .bottom__box {
     display: flex;

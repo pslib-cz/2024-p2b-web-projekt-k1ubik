@@ -25,3 +25,7 @@ header a:hover {
     --swiper-navigation-color: #605f5f;
     height: 60px; /* height on hover */
 }
+.unclickable:hover {
+    cursor: not-allowed;
+    background: #EDF7B5;
+}
