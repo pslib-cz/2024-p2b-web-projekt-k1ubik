@@ -17,3 +17,11 @@
 header a:hover {
     height: 10px;
 }
+.swiper {
+    --swiper-navigation-color: #828282;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    --swiper-navigation-color: #605f5f;
+    height: 60px; /* height on hover */
+}

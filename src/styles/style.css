@@ -143,6 +143,7 @@ main {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), filter 0.3s;
 } 
 .slide-overlay .clk_h {
     font-size: small;
@@ -152,6 +153,20 @@ main {
     color: black;
     text-shadow: none;
 }
+
+.swiper {
+    transition: filter 0.3s;
+    z-index: 1;
+}
+
+.swiper:hover ~ .swiper,
+.swiper:has(~ .swiper:hover) {
+    filter: blur(4px);
+}
+.slide-overlay:hover {
+    transform: translate(-50%, -60%);
+}
+
 .forms main div {
     display: grid;
     grid-template-columns: 1fr; 
@@ -189,7 +204,12 @@ main {
 .catway h1 {
     text-shadow: #333333 2px 2px 4px;
 }
-
+.catway main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .bottom__box {
     display: flex;
     flex-direction: column;
@@ -198,9 +218,7 @@ main {
     text-align: center;
     gap: 20px;
 }
-.catway main {
-    display: flex;
-}
+
 
 
 @media (max-width: 530px) {
@@ -238,7 +256,7 @@ main {
         grid-template-rows: repeat(2, 1fr);
     }
     .slide-overlay {
-        top: 78%;
+        top: 85%;
         height: 250px;
     }
     .forms main div div { 
